@@ -126,7 +126,7 @@ export default function Converter({ token, url }) {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {videoList.map((video, index) => (
-                <Link key={video.fs_id || index} href="#video" className="block">
+                <a key={video.fs_id || index} href="#video" className="block">
                   <button
                     onClick={() => handleSelectVideo(video)}
                     className={`group relative flex flex-col items-start w-full rounded-2xl overflow-hidden border shadow-md transition-all duration-300 hover:shadow-xl ${selectedVideo.fs_id === video.fs_id
@@ -166,7 +166,7 @@ export default function Converter({ token, url }) {
                     {/* Subtle hover glow */}
                     <div className="absolute inset-0 border-2 border-transparent group-hover:border-red-400/40 rounded-2xl transition-all duration-300 pointer-events-none"></div>
                   </button>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -209,3 +209,4 @@ export default function Converter({ token, url }) {
   );
 
 }
+
