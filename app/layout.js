@@ -1,16 +1,16 @@
- 
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/footer/Footer";
 import Script from "next/script";
-import Footer from '@/components/footer/Footer'
+
 export const metadata = {
-  title: "Terafetch | Free TeraBox Video & File Downloader (100% Working)",
+  title: "TeraFetch",
   description:
-    "Download TeraBox videos and files instantly with terafetch. 100% working, fast, secure, and ad-free TeraBox downloader that generates direct download links in seconds.",
+    "Download TeraBox videos and files instantly with Terafetch. 100% working, fast, secure, and ad-free TeraBox downloader that generates direct download links in seconds.",
   keywords: [
     "TeraBox downloader",
     "TeraBox video downloader",
-    "terafetch",
+    "Terafetch",
     "free terabox download",
     "terabox direct link generator",
     "terabox file downloader",
@@ -18,16 +18,16 @@ export const metadata = {
     "terabox link generator",
     "terabox premium download",
   ],
-  authors: [{ name: "terafetch Team" }],
+  authors: [{ name: "Terafetch Team" }],
   openGraph: {
     title: "Terafetch | Free TeraBox Downloader | Fast & Secure",
     description:
-      "Generate direct download links for TeraBox videos and files with terafetch. Fast, secure, and easy to use — no login required.",
-    url: "https://terafetch.netlify.app", // change to your real domain
-    siteName: "terafetch",
+      "Generate direct download links for TeraBox videos and files with Terafetch. Fast, secure, and easy to use — no login required.",
+    url: "https://terafetch.netlify.app",
+    siteName: "Terafetch",
     images: [
       {
-        url: "https://terafetch.netlify.app/og-image.png", // optional preview image
+        url: "https://terafetch.netlify.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Terafetch | Free TeraBox Downloader",
@@ -49,38 +49,47 @@ export const metadata = {
   },
 };
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-       <head>
+      <head>
+        {/* Google Tag Manager */}
+        <Script id="gtm-script" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){
+              w[l]=w[l]||[];
+              w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+              var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+              j.async=true;
+              j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+              f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-MGJPM53M');
+          `}
+        </Script>
+
         {/* Google Search Console Verification */}
         <meta
           name="google-site-verification"
           content="a519RGXXnU8_HDFGvb_9NLkro6BAy_BnCXPq8fhFTkY"
         />
-
-        {/* Google Analytics 4 */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-WZL37ER1NV"
-          strategy="afterInteractive"
-        />
-        <Script id="ga-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-WZL37ER1NV', {
-              page_path: window.location.pathname,
-            });
-          `}
-        </Script>
       </head>
-      <body className= "bg-background  ">
-       
-          <Navbar />
-         <main className="bg-gradient-to-br from-pink-100 via-pink-200 to-orange-100">{children}</main>
-         <Footer/> 
+
+      <body className="bg-background">
+        {/* Google Tag Manager (noscript) */}
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGJPM53M"
+              height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+          }}
+        />
+        {/* End Google Tag Manager (noscript) */}
+
+        <Navbar />
+        <main className="bg-gradient-to-br from-pink-100 via-pink-200 to-orange-100">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
