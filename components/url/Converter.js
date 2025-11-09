@@ -90,7 +90,7 @@ export default function Converter({ token, url }) {
   <div className="flex flex-col items-center justify-center w-full max-w-6xl px-4 sm:px-6 lg:px-8 pb-10 mx-auto">
   {/* 🔄 Loading State */}
   {loading && !error && (
-    <div className="w-full h-[50vh] flex items-center justify-center rounded-2xl bg-gray-200/60 dark:bg-gray-800/60 animate-pulse shadow-inner">
+    <div className="w-full h-[50vh] flex items-center justify-center rounded-2xl bg-gray-200/60 dark:bg-gray-800/60 animate-pulse md:shadow-inner">
       <p className="text-gray-500 dark:text-gray-400 text-lg font-medium">
         Loading videos... 🎥
       </p>
@@ -129,10 +129,10 @@ export default function Converter({ token, url }) {
 
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mt-4">
           <div className="text-center md:text-left">
-            <h2 className="text-xl font-semibold text-gray-900 ">
+            <h2 className="text-xl font-semibold text-gray-900 truncate w-full ">
               {selectedVideo.name}
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">
+            <p className="text-gray-800 dark:text-gray-400 text-sm">
               {selectedVideo.quality} • {selectedVideo.duration} •{" "}
               {selectedVideo.size_formatted}
             </p>
@@ -169,7 +169,7 @@ export default function Converter({ token, url }) {
                   <img
                     src={video.thumbnail}
                     alt={video.name}
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                    className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
 

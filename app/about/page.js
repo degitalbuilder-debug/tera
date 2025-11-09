@@ -23,7 +23,7 @@ export const metadata = {
 
 export default function AboutTeraFetch() {
   return (
-    <section className="max-w-5xl mx-auto p-8  h-screen text-gray-700 transition-all">
+    <section className="max-w-5xl mx-auto p-8  min-h-screen text-gray-700 transition-all">
       <h1 className="text-3xl font-bold text-pink-600 mb-4 text-center">
         About TeraFetch
       </h1>

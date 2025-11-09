@@ -17,7 +17,7 @@ export default function TakeUrl() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12 ">
+    <div className="flex flex-col items-center md:justify-center min-h-screen px-6 py-12 ">
       {/* 🧩 Hero Section */}
       <section className="text-center max-w-3xl mb-10">
         <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">
@@ -44,7 +44,7 @@ export default function TakeUrl() {
               placeholder="https://1024terabox.com/s/..."
               value={url}
               onChange={(e) => setUrl(e.target.value)}
-              className="w-2xl px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-pink-400 pr-10 text-gray-800 placeholder-gray-500 bg-pink-50"
+              className=" w-full md:w-2xl px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-pink-400 pr-10 text-gray-800 placeholder-gray-500 bg-pink-50"
             />
             <FiClipboard
               onClick={handlePaste}

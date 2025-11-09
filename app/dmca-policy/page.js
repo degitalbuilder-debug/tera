@@ -29,7 +29,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="max-w-5xl mx-auto px-6 pt-14 pb-20 leading-relaxed text-gray-900 dark:text-gray-100">
+    <main className="max-w-5xl mx-auto px-6 pt-14 pb-20 leading-relaxed text-gray-900  ">
       {/* Header */}
       <section className="mb-10">
         <h1 className="text-4xl font-bold mb-4 text-pink-600 dark:text-pink-400">

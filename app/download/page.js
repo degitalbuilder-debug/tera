@@ -1,6 +1,7 @@
 import { genToken } from "@/lib/genToken";
 import Converter from "@/components/url/Converter";
 import { FaArrowLeft } from "react-icons/fa6";
+import Link from "next/link";
 export default async function DownloadPage({ searchParams }) {
   // Await the async searchParams object
   const params = await searchParams;
@@ -16,12 +17,14 @@ export default async function DownloadPage({ searchParams }) {
       TeraBox Downloader
       </h1>
 <div className="w-full h-20 flex items-center justify-center">
+ <Link href="/">
   <button className="flex cursor-pointer items-center justify-center gap-2 px-4 py-3 rounded-md bg-pink-500 text-white font-medium
     transition-all duration-300 ease-in-out
     hover:gap-4 hover:scale-105 hover:bg-pink-600">
     <FaArrowLeft className="transition-transform duration-300 ease-in-out group-hover:-translate-x-1" />
     Download another video
   </button>
+ </Link>
 </div>
 
 
