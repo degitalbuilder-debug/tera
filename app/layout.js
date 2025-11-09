@@ -79,7 +79,7 @@ export default function RootLayout({ children }) {
       <body className= "bg-background  ">
        
           <Navbar />
-         <main className="">{children}</main>
+         <main className="bg-gradient-to-br from-pink-100 via-pink-200 to-orange-100">{children}</main>
          <Footer/> 
       </body>
     </html>

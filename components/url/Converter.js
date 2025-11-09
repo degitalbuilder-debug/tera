@@ -101,7 +101,7 @@ export default function Converter({ token, url }) {
   {error && (
     <div className="flex flex-col items-center justify-center text-center gap-4 p-6 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-700 shadow-md mt-6">
       <p className="text-red-600 dark:text-red-400 font-semibold text-lg">
-        No File Found or Try again !
+        {error}
       </p>
       <button
         onClick={handleReload}
@@ -202,4 +202,3 @@ export default function Converter({ token, url }) {
 
   );
 }
-
