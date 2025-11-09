@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { FiClipboard } from "react-icons/fi";
-
+import Banner728x90 from "../ads/adsterra/Banner728x90";
+import NativeBanner from "../ads/adsterra/NativeBanner"
 export default function TakeUrl() {
   const [url, setUrl] = useState("");
   const downloadPath = url ? `/download?url=${encodeURIComponent(url)}` : "#";
@@ -17,9 +18,9 @@ export default function TakeUrl() {
   };
 
   return (
-    <div className="flex flex-col items-center md:justify-center min-h-screen px-6 py-12 ">
+    <div className="flex flex-col items-center md:justify-center min-h-screen md:px-6 py-12 ">
       {/* 🧩 Hero Section */}
-      <section className="text-center max-w-3xl mb-10">
+      <section className="text-center px-6 md:px-0 max-w-3xl mb-10">
         <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-orange-500">
             TeraFetch
@@ -37,7 +38,7 @@ export default function TakeUrl() {
       {/* 🧠 Input Section */}
       
 
-        <div className="flex  flex-col gap-5">
+        <div className="flex w-full px-3 md:px-0 md:w-fit flex-col gap-5">
           <div className="relative">
             <input
               type="text"
@@ -56,9 +57,9 @@ export default function TakeUrl() {
 
           <Link
             href={downloadPath}
-            className={`text-center font-semibold py-3 rounded-lg transition-all duration-200 ${
+            className={`text-center border border-black font-semibold py-3 rounded-lg transition-all duration-200 ${
               !url
-                ? "opacity-50 pointer-events-none"
+                ? "opacity-70 pointer-events-none"
                 : "hover:scale-105 hover:shadow-lg"
             }`}
             style={{
@@ -66,11 +67,11 @@ export default function TakeUrl() {
               color: "#fff",
             }}
           >
-            Download from Terabox
+            Download  
           </Link>
         </div>
-   
-
+   <Banner728x90/>
+<NativeBanner/>
     
     </div>
   );
