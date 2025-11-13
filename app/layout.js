@@ -23,11 +23,11 @@ export const metadata = {
     title: "Terafetch | Free TeraBox Downloader | Fast & Secure",
     description:
       "Generate direct download links for TeraBox videos and files with Terafetch. Fast, secure, and easy to use — no login required.",
-    url: "https://terafetch.netlify.app",
+    url: "https://terafetch.vercel.app",
     siteName: "Terafetch",
     images: [
       {
-        url: "https://terafetch.netlify.app/og-image.png",
+        url: "https://terafetch.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Terafetch | Free TeraBox Downloader",
@@ -41,11 +41,11 @@ export const metadata = {
     title: "Terafetch | Free TeraBox Downloader",
     description:
       "Download videos and files from TeraBox instantly using Terafetch | 100% working and secure.",
-    images: ["https://terafetch.netlify.app/og-image.png"],
+    images: ["https://terafetch.vercel.app/og-image.png"],
   },
-  metadataBase: new URL("https://terafetch.netlify.app"),
+  metadataBase: new URL("https://terafetch.vercel.app"),
   alternates: {
-    canonical: "https://terafetch.netlify.app",
+    canonical: "https://terafetch.vercel.app",
   },
 };
 
@@ -71,7 +71,7 @@ export default function RootLayout({ children }) {
         {/* Google Search Console Verification */}
         <meta
           name="google-site-verification"
-          content="a519RGXXnU8_HDFGvb_9NLkro6BAy_BnCXPq8fhFTkY"
+          content="l447jfQ4xxcrmN2Q_Cq8q3aeuLvLAJo6cVNv35IA96Y"
         />
       </head>
 
