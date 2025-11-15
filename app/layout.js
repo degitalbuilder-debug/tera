@@ -4,13 +4,13 @@ import Footer from "@/components/footer/Footer";
 import Script from "next/script";
 
 export const metadata = {
-  title: "TeraFetch",
+  title: "Teralinkplayer",
   description:
-    "Download TeraBox videos and files instantly with Terafetch. 100% working, fast, secure, and ad-free TeraBox downloader that generates direct download links in seconds.",
+    "Download TeraBox videos and files instantly with Teralinkplayer. 100% working, fast, secure, and ad-free TeraBox downloader that generates direct download links in seconds.",
   keywords: [
     "TeraBox downloader",
     "TeraBox video downloader",
-    "Terafetch",
+    "Teralinkplayer",
     "free terabox download",
     "terabox direct link generator",
     "terabox file downloader",
@@ -18,19 +18,19 @@ export const metadata = {
     "terabox link generator",
     "terabox premium download",
   ],
-  authors: [{ name: "Terafetch Team" }],
+  authors: [{ name: "Teralinkplayer Team" }],
   openGraph: {
-    title: "Terafetch | Free TeraBox Downloader | Fast & Secure",
+    title: "Teralinkplayer | Free TeraBox Downloader | Fast & Secure",
     description:
-      "Generate direct download links for TeraBox videos and files with Terafetch. Fast, secure, and easy to use — no login required.",
-    url: "https://terafetch.vercel.app",
-    siteName: "Terafetch",
+      "Generate direct download links for TeraBox videos and files with Teralinkplayer. Fast, secure, and easy to use — no login required.",
+    url: "https://Teralinkplayer.vercel.app",
+    siteName: "Teralinkplayer",
     images: [
       {
-        url: "https://terafetch.vercel.app/og-image.png",
+        url: "https://Teralinkplayer.vercel.app/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Terafetch | Free TeraBox Downloader",
+        alt: "Teralinkplayer | Free TeraBox Downloader",
       },
     ],
     locale: "en_US",
@@ -38,14 +38,14 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terafetch | Free TeraBox Downloader",
+    title: "Teralinkplayer | Free TeraBox Downloader",
     description:
-      "Download videos and files from TeraBox instantly using Terafetch | 100% working and secure.",
-    images: ["https://terafetch.vercel.app/og-image.png"],
+      "Download videos and files from TeraBox instantly using Teralinkplayer | 100% working and secure.",
+    images: ["https://Teralinkplayer.vercel.app/og-image.png"],
   },
-  metadataBase: new URL("https://terafetch.vercel.app"),
+  metadataBase: new URL("https://Teralinkplayer.vercel.app"),
   alternates: {
-    canonical: "https://terafetch.vercel.app",
+    canonical: "https://Teralinkplayer.vercel.app",
   },
 };
 
@@ -64,14 +64,14 @@ export default function RootLayout({ children }) {
               j.async=true;
               j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
               f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-MGJPM53M');
+            })(window,document,'script','dataLayer','GTM-N2BC5WZF');
           `}
         </Script>
 
         {/* Google Search Console Verification */}
         <meta
           name="google-site-verification"
-          content="l447jfQ4xxcrmN2Q_Cq8q3aeuLvLAJo6cVNv35IA96Y"
+          content="a519RGXXnU8_HDFGvb_9NLkro6BAy_BnCXPq8fhFTkY"
         />
       </head>
 
@@ -79,7 +79,7 @@ export default function RootLayout({ children }) {
         {/* Google Tag Manager (noscript) */}
         <noscript
           dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGJPM53M"
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2BC5WZF"
               height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
           }}
         />

@@ -126,7 +126,7 @@ export default function Converter({ token, url }) {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {videoList.map((video, index) => (
-                <a key={video.fs_id || index} href="#video" className="block">
+                <Link key={video.fs_id || index} href="#video" className="block">
                   <button
                     onClick={() => handleSelectVideo(video)}
                     className={`group relative flex flex-col items-start w-full rounded-2xl overflow-hidden border shadow-md transition-all duration-300 hover:shadow-xl ${selectedVideo.fs_id === video.fs_id
@@ -141,11 +141,11 @@ export default function Converter({ token, url }) {
                         alt={video.name}
                         className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-300"
                       />
-                      <div className="absolute top-0 left-0 w-full h-full bg-black/20  flex items-center justify-center">
-                        <div className="p-2 rounded-full bg-red-400">
+                      <div className="absolute top-0 left-0 w-full h-full bg-black  flex items-center justify-center">
+                        <div className="p-2 rounded-full bg-red-500">
   <Play className="w-6 h-6 text-white" />
 </div>
-                        </div>
+ </div>
                     </div>
 
                     {/* Details */}
@@ -166,7 +166,7 @@ export default function Converter({ token, url }) {
                     {/* Subtle hover glow */}
                     <div className="absolute inset-0 border-2 border-transparent group-hover:border-red-400/40 rounded-2xl transition-all duration-300 pointer-events-none"></div>
                   </button>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -207,6 +207,4 @@ export default function Converter({ token, url }) {
     </div>
 
   );
-
 }
-
