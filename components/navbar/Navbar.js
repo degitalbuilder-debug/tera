@@ -26,7 +26,7 @@ export default function Navbar() {
             href="/"
             className="text-xl font-semibold tracking-wide text-pink-600 hover:text-orange-500 transition-colors"
           >
-            TeraFetch
+            TeraLinkPlayer
           </Link>
         </div>
 

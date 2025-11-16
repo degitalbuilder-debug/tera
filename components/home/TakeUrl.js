@@ -1,11 +1,15 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { FiClipboard } from "react-icons/fi";
 import Banner728x90 from "../ads/adsterra/Banner728x90";
-import NativeBanner from "../ads/adsterra/NativeBanner"
+import NativeBanner from "../ads/adsterra/NativeBanner";
+
 export default function TakeUrl() {
   const [url, setUrl] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const router = useRouter();
   const downloadPath = url ? `/download?url=${encodeURIComponent(url)}` : "#";
 
   const handlePaste = async () => {
@@ -17,13 +21,19 @@ export default function TakeUrl() {
     }
   };
 
+  const handleDownload = () => {
+    if (!url) return;
+    setLoading(true);
+    router.push(downloadPath);
+  };
+
   return (
     <div className="flex flex-col items-center md:justify-center min-h-screen md:px-6 py-12 ">
       {/* 🧩 Hero Section */}
       <section className="text-center px-6 md:px-0 max-w-3xl mb-10">
         <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-orange-500">
-            TeraLinkPlayer 
+            TeraLinkPlayer
           </span>{" "}
           – Free Terabox Downloader for Videos, Images & Files
         </h1>
@@ -36,43 +46,42 @@ export default function TakeUrl() {
       </section>
 
       {/* 🧠 Input Section */}
-      
-
-        <div className="flex w-full px-3 md:px-0 md:w-fit flex-col gap-5">
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="https://1024terabox.com/s/..."
-              value={url}
-              onChange={(e) => setUrl(e.target.value)}
-              className=" w-full md:w-2xl px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-pink-400 pr-10 text-gray-800 placeholder-gray-500 bg-pink-50"
-            />
-            <FiClipboard
-              onClick={handlePaste}
-              size={22}
-              title="Paste from clipboard"
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-pink-500 hover:text-pink-600 cursor-pointer transition-colors"
-            />
-          </div>
-
-          <Link
-            href={downloadPath}
-            className={`text-center border border-black font-semibold py-3 rounded-lg transition-all duration-200 ${
-              !url
-                ? "opacity-70 pointer-events-none"
-                : "hover:scale-105 hover:shadow-lg"
-            }`}
-            style={{
-              background: "linear-gradient(90deg, #ff6f91, #ff9966)",
-              color: "#fff",
-            }}
-          >
-            Download  
-          </Link>
+      <div className="flex w-full px-3 md:px-0 md:w-fit flex-col gap-5">
+        <div className="relative">
+          <input
+            type="text"
+            placeholder="https://1024terabox.com/s/..."
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
+            className="w-full md:w-2xl px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-pink-400 pr-10 text-gray-800 placeholder-gray-500 bg-pink-50"
+          />
+          <FiClipboard
+            onClick={handlePaste}
+            size={22}
+            title="Paste from clipboard"
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-pink-500 hover:text-pink-600 cursor-pointer transition-colors"
+          />
         </div>
-   <Banner728x90/>
-<NativeBanner/>
-    
+
+        <button
+          onClick={handleDownload}
+          disabled={!url || loading}
+          className={`text-center border border-black font-semibold py-3 rounded-lg transition-all duration-200 ${
+            !url || loading
+              ? "opacity-70 cursor-not-allowed"
+              : "hover:scale-105 hover:shadow-lg"
+          }`}
+          style={{
+            background: "linear-gradient(90deg, #ff6f91, #ff9966)",
+            color: "#fff",
+          }}
+        >
+          {loading ? "Processing..." : "Download"}
+        </button>
+      </div>
+
+      <Banner728x90 />
+      <NativeBanner />
     </div>
   );
 }
