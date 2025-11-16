@@ -1,19 +1,19 @@
 import WhatIsTerabox from "@/components/home/WhatIsTerabox";
-import WhatIsTeraboxNetlify from "@/components/home/WhatIsTeraboxNetlify";
+import WhatIsTeraLinkPlayer from "@/components/home/WhatIsTeraLinkPlayer";
 import HowToDownload from "@/components/home/HowToDownload";
 import Disclaimer from "@/components/home/Disclaimer";
 import Faq from "@/components/home/Faq";
 import Popunder from "@/components/ads/adsterra/Popunder";
 import TakeUrl from "@/components/home/TakeUrl";
-
+import UserStats from "@/components/home/UserStats"
 export const metadata = {
-  title: "TeraFetch | Free TeraBox Video & File Downloader (100% Working)",
+  title: "TeraLinkPlayer | Free Terabox Video Downloader (No Login Needed)",
   description:
-    "Download TeraBox videos and files instantly with Terafetch. 100% working, fast, secure, and ad-free TeraBox downloader that generates direct download links in seconds.",
+    "Download Terabox videos and files instantly with TeraLinkPlayer. 100% working, fast, secure Terabox downloader that generates direct video links without login.",
   keywords: [
-    "TeraBox downloader",
-    "TeraBox video downloader",
-    "Terafetch",
+    "Terabox downloader",
+    "Terabox video downloader",
+    "TeraLinkPlayer",
     "free terabox download",
     "terabox direct link generator",
     "terabox file downloader",
@@ -21,19 +21,19 @@ export const metadata = {
     "terabox link generator",
     "terabox premium download",
   ],
-  authors: [{ name: "Terafetch Team" }],
+  authors: [{ name: "TeraLinkPlayer Team" }],
   openGraph: {
-    title: "Terafetch | Free TeraBox Downloader | Fast & Secure",
+    title: "TeraLinkPlayer | Free Terabox Downloader | Fast & Secure",
     description:
-      "Generate direct download links for TeraBox videos and files with Terafetch. Fast, secure, and easy to use — no login required.",
-    url: "https://terafetch.netlify.app",
-    siteName: "Terafetch",
+      "Generate direct Terabox video and file download links with TeraLinkPlayer — fast, secure, and no login required.",
+    url: "https://teralinkplayer.vercel.app",
+    siteName: "TeraLinkPlayer",
     images: [
       {
-        url: "https://terafetch.netlify.app/og-image.png",
+        url: "https://teralinkplayer.vercel.app/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Terafetch | Free TeraBox Downloader",
+        alt: "TeraLinkPlayer | Free Terabox Downloader",
       },
     ],
     locale: "en_US",
@@ -41,14 +41,14 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terafetch | Free TeraBox Downloader",
+    title: "TeraLinkPlayer | Free Terabox Downloader",
     description:
-      "Download videos and files from TeraBox instantly using Terafetch | 100% working and secure.",
-    images: ["https://terafetch.netlify.app/og-image.png"],
+      "Instant Terabox downloader that generates video and file download links. No signup required.",
+    images: ["https://teralinkplayer.vercel.app/og-image.png"],
   },
-  metadataBase: new URL("https://terafetch.netlify.app"),
+  metadataBase: new URL("https://teralinkplayer.vercel.app"),
   alternates: {
-    canonical: "https://terafetch.netlify.app",
+    canonical: "https://teralinkplayer.vercel.app",
   },
 };
 
@@ -60,8 +60,9 @@ export default function Home() {
     <>
       <Popunder />
       <TakeUrl />
+      <UserStats/>
       <WhatIsTerabox />
-      <WhatIsTeraboxNetlify />
+      <WhatIsTeraLinkPlayer />
       <HowToDownload />
       <Disclaimer />
       <Faq />

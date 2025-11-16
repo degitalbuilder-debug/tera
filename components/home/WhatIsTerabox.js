@@ -1,4 +1,4 @@
-"use client";
+ 
 import React from "react";
 import {
   Cloud,
@@ -21,30 +21,23 @@ function WhatIsTerabox() {
 
       {/* 📄 Description */}
       <p className="leading-relaxed mb-4 text-gray-700">
-        <strong className="text-pink-600">TeraBox</strong> is a popular{" "}
-        <strong className="text-orange-500">free cloud storage platform</strong>{" "}
-        offering up to <strong>1TB of secure storage space</strong> for your
-        photos, videos, and documents. It lets you easily store, share, and
-        access your files anytime — whether you’re using a desktop, laptop, or
-        smartphone.
+        <strong className="text-pink-600">TeraBox</strong> is a free cloud storage platform that gives you <strong className="text-orange-500">up to 1TB of secure storage</strong> for all your files — photos, videos, documents, and more. It’s like having a personal locker in the cloud that you can access from any device, anytime.
       </p>
 
+      <p className="leading-relaxed mb-4 text-gray-700">
+        Unlike other cloud services, TeraBox makes it easy to organize your files, back them up automatically, and share them with friends or colleagues with just a few clicks. Your data stays <strong className="text-pink-500">safe</strong>, <strong className="text-orange-500">organized</strong>, and <strong className="text-pink-600">always accessible</strong>.
+      </p>
+
+      {/* 💡 Example */}
       <p className="leading-relaxed mb-8 text-gray-700">
-        With features like smart organization, automatic backups, and instant
-        file sharing,{" "}
-        <strong className="text-pink-500">TeraBox keeps your data safe</strong>,{" "}
-        <strong className="text-orange-500">well-managed</strong>, and{" "}
-        <strong className="text-pink-600">always accessible</strong> wherever
-        you go.
+        <strong>Example:</strong> Imagine you have a 5GB video saved on TeraBox and you want to share it with a friend. Normally, you’d need to send them the TeraBox link, and they’d have to navigate the website to download it. With <strong className="text-pink-600">Terabox Link Player</strong>, you can instantly convert that link into a <strong>direct download URL</strong>, so your friend can download it with just one click — no login, no hassle.
       </p>
 
       {/* ✨ Features Section */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
         <div className="flex flex-col items-center text-center gap-3 p-5 bg-gradient-to-br from-pink-50 to-white border border-pink-200 rounded-2xl hover:shadow-md transition-all">
           <ShieldCheck className="w-8 h-8 text-pink-500" />
-          <p className="font-semibold text-gray-700">
-            Secure 1TB Cloud Storage
-          </p>
+          <p className="font-semibold text-gray-700">Secure 1TB Cloud Storage</p>
         </div>
 
         <div className="flex flex-col items-center text-center gap-3 p-5 bg-gradient-to-br from-orange-50 to-white border border-orange-200 rounded-2xl hover:shadow-md transition-all">
@@ -54,12 +47,12 @@ function WhatIsTerabox() {
 
         <div className="flex flex-col items-center text-center gap-3 p-5 bg-gradient-to-br from-pink-50 to-white border border-pink-200 rounded-2xl hover:shadow-md transition-all">
           <Share2 className="w-8 h-8 text-pink-500" />
-          <p className="font-semibold text-gray-700">Effortless File Sharing</p>
+          <p className="font-semibold text-gray-700">Instant File Sharing</p>
         </div>
 
         <div className="flex flex-col items-center text-center gap-3 p-5 bg-gradient-to-br from-orange-50 to-white border border-orange-200 rounded-2xl hover:shadow-md transition-all">
           <Cloud className="w-8 h-8 text-orange-500" />
-          <p className="font-semibold text-gray-700">Access Anytime, Anywhere</p>
+          <p className="font-semibold text-gray-700">Access Anywhere, Anytime</p>
         </div>
       </div>
 
@@ -67,7 +60,7 @@ function WhatIsTerabox() {
       <div className="flex flex-col md:flex-row items-start md:items-center gap-3 p-5 bg-pink-50 border border-pink-200 rounded-2xl hover:shadow-sm transition-all">
         <MessageSquare className="w-6 h-6 text-pink-600 mt-1" />
         <p className="text-gray-700 text-sm leading-relaxed">
-          Need help or have a question? Join our{" "}
+          Got questions or need help converting links? Join our{" "}
           <a
             href="https://t.me/+2fvOF7WT0YBjZDM9"
             target="_blank"
@@ -76,7 +69,7 @@ function WhatIsTerabox() {
           >
             Telegram Community
           </a>{" "}
-          to ask, share, or get updates about TeraBox downloads.
+          to chat, share tips, or get the latest updates on TeraBox downloads.
         </p>
       </div>
     </section>

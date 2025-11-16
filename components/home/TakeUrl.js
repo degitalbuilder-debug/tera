@@ -23,14 +23,14 @@ export default function TakeUrl() {
       <section className="text-center px-6 md:px-0 max-w-3xl mb-10">
         <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-orange-500">
-            TeraFetch
+            TeraLinkPlayer 
           </span>{" "}
           – Free Terabox Downloader for Videos, Images & Files
         </h1>
 
         <p className="mt-5 text-gray-700 text-lg md:text-xl">
           Instantly <strong>download Terabox videos, images, and large files</strong>{" "}
-          without logging in. <strong>TeraFetch</strong> is a fast, secure, and free
+          without logging in. <strong>TeraLinkPlayer </strong> is a fast, secure, and free
           downloader that helps you skip Terabox login and privacy restrictions.
         </p>
       </section>

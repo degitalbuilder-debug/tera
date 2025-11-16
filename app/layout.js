@@ -4,48 +4,49 @@ import Footer from "@/components/footer/Footer";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Teralinkplayer",
+  title: "Teralinkplayer | Watch & Download Terabox Videos Online (No Login)",
   description:
-    "Download TeraBox videos and files instantly with Teralinkplayer. 100% working, fast, secure, and ad-free TeraBox downloader that generates direct download links in seconds.",
+    "Paste your Terabox link and instantly watch or download videos without login. Fast, secure, 100% working Terabox online player & downloader.",
   keywords: [
-    "TeraBox downloader",
-    "TeraBox video downloader",
-    "Teralinkplayer",
-    "free terabox download",
+    "terabox player",
+    "terabox downloader",
+    "terabox online player",
+    "terabox video downloader",
+    "terabox link player",
+    "watch terabox without login",
     "terabox direct link generator",
-    "terabox file downloader",
-    "download terabox without login",
-    "terabox link generator",
-    "terabox premium download",
+    "terabox file player",
   ],
   authors: [{ name: "Teralinkplayer Team" }],
+  metadataBase: new URL("https://teralinkplayer.vercel.app"),
+  alternates: {
+    canonical: "https://teralinkplayer.vercel.app",
+  },
+
   openGraph: {
-    title: "Teralinkplayer | Free TeraBox Downloader | Fast & Secure",
+    title: "Teralinkplayer | Watch Terabox Videos Without Login",
     description:
-      "Generate direct download links for TeraBox videos and files with Teralinkplayer. Fast, secure, and easy to use — no login required.",
-    url: "https://Teralinkplayer.vercel.app",
+      "Play or download Terabox videos instantly using Teralinkplayer. No account needed — fast & secure.",
+    url: "https://teralinkplayer.vercel.app",
     siteName: "Teralinkplayer",
     images: [
       {
-        url: "https://Teralinkplayer.vercel.app/og-image.png",
+        url: "https://teralinkplayer.vercel.app/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Teralinkplayer | Free TeraBox Downloader",
+        alt: "Teralinkplayer Online Terabox Player",
       },
     ],
     locale: "en_US",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Teralinkplayer | Free TeraBox Downloader",
+    title: "Teralinkplayer | Terabox Online Player",
     description:
-      "Download videos and files from TeraBox instantly using Teralinkplayer | 100% working and secure.",
-    images: ["https://Teralinkplayer.vercel.app/og-image.png"],
-  },
-  metadataBase: new URL("https://Teralinkplayer.vercel.app"),
-  alternates: {
-    canonical: "https://Teralinkplayer.vercel.app",
+      "Paste Terabox link → Watch instantly. No login needed. Fast Terabox video player.",
+    images: ["https://teralinkplayer.vercel.app/og-image.png"],
   },
 };
 
@@ -68,27 +69,50 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-        {/* Google Search Console Verification */}
+        {/* Google Search Console */}
         <meta
           name="google-site-verification"
           content="a519RGXXnU8_HDFGvb_9NLkro6BAy_BnCXPq8fhFTkY"
         />
+
+        {/* JSON-LD Schema for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              name: "Teralinkplayer",
+              url: "https://teralinkplayer.vercel.app",
+              applicationCategory: "Utility",
+              operatingSystem: "All",
+              description:
+                "Watch and download Terabox videos without login using Teralinkplayer.",
+              offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "INR",
+              },
+            }),
+          }}
+        />
       </head>
 
       <body className="bg-background">
-        {/* Google Tag Manager (noscript) */}
+        {/* GTM noscript */}
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2BC5WZF"
               height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
           }}
         />
-        {/* End Google Tag Manager (noscript) */}
 
         <Navbar />
+
         <main className="bg-gradient-to-br from-pink-100 via-pink-200 to-orange-100">
           {children}
         </main>
+
         <Footer />
       </body>
     </html>

@@ -1,32 +1,27 @@
-// ✅ Server Component (no "use client")
 import { HelpCircle } from "lucide-react";
 
 export default function Faq() {
   const faqs = [
     {
-      q: "How does TeraDownloader work?",
-      a: "TeraDownloader generates direct download links for files on TeraBox, making it easier to access your content without logging in.",
+      q: "How can I download Terabox videos without login?",
+      a: "Just copy the public Terabox link and paste it into TeraLinkPlayer. It instantly generates a direct download link — no login or app needed. For example, if someone shares a 2GB video via Telegram, you can get the download link in seconds."
     },
     {
-      q: "Can I generate unlimited download links?",
-      a: "Yes, you can generate as many download links as you want — completely free!",
+      q: "Why is my Terabox link not loading?",
+      a: "Make sure the link is public and not password-protected. TeraLinkPlayer only works with publicly accessible links. Private or expired links won’t work."
     },
     {
-      q: "Does it work with all TeraBox links?",
-      a: "It supports public TeraBox links for individual files. Folder links are not currently supported.",
+      q: "Does TeraLinkPlayer work with Terabox premium downloads?",
+      a: "Yes! As long as the shared link allows it, TeraLinkPlayer can fetch high-quality or premium files without any hassle."
     },
     {
-      q: "Is it legal to use this tool?",
-      a: "Yes, as long as you are downloading content you have rights to access, this tool is fully legal.",
+      q: "Is it safe to use TeraLinkPlayer?",
+      a: "Absolutely. TeraLinkPlayer never stores your files or tracks your personal data. All downloads come straight from Terabox servers, so your privacy is protected."
     },
     {
-      q: "Do I need an account to use the downloader?",
-      a: "No, you don’t need an account. Just visit the website and start generating download links instantly.",
-    },
-    {
-      q: "Is my data safe?",
-      a: "Yes, we prioritize your privacy. We don’t collect personal data, and your files remain private.",
-    },
+      q: "Can I download videos, images, and documents?",
+      a: "Yes! TeraLinkPlayer supports all common file types — videos, photos, documents, ZIP files, and more. For example, you can download a shared presentation or a vacation video with just one click."
+    }
   ];
 
   return (
@@ -63,7 +58,7 @@ export default function Faq() {
                 />
               </svg>
             </summary>
-            <div className="px-4 pb-4 text-sm text-white leading-relaxed animate-fadeIn">
+            <div className="px-4 pb-4 text-sm text-black leading-relaxed animate-fadeIn">
               {item.a}
             </div>
           </details>
