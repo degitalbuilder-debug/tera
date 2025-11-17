@@ -141,7 +141,7 @@ export default function Converter({ token, url }) {
                         alt={video.name}
                         className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-300"
                       />
-                      <div className="absolute top-0 left-0 w-full h-full bg-black  flex items-center justify-center">
+                      <div className="absolute top-0 left-0 w-full h-full bg-black/20  flex items-center justify-center">
                         <div className="p-2 rounded-full bg-red-500">
   <Play className="w-6 h-6 text-white" />
 </div>
@@ -207,4 +207,5 @@ export default function Converter({ token, url }) {
     </div>
 
   );
+
 }
